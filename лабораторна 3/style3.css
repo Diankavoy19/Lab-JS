@@ -1,0 +1,110 @@
+body{
+    font-family: 'Cookie-Regular', cursive;
+    font-size: 10px;
+    color:aliceblue;
+    line-height: 40px;
+    background: url("%D1%84%D0%BE%D0%BD.gif")center no-repeat;
+    background-size: cover;
+ background-size: cover;
+}
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: pink;
+    
+}
+
+.button{
+    background-color: lightgrey;
+    color: black;
+    height: 30px;
+    width: 100px;
+    border-radius: 30%;
+    font-size: 30px;
+}
+.button1{
+    border-left: 20px;
+    display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  text-shadow: 1px 1px rgba(0,0,0,.3);
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 15px;
+   background-color: bisque;
+  box-shadow:
+   inset 0 0 3px 1px rgba(0,0,0,.8),
+   inset rgba(0,0,0,.3) -5px -5px 8px 5px,
+   inset rgba(255,255,255,.5) 5px 5px 8px 5px,
+   1px 1px 1px rgba(255,255,255,.1),
+   -2px -2px 5px rgba(0,0,0,.5);
+  transition: .2s;
+}
+.button1:hover {
+  color: black;
+  background-color: beige;
+}
+.button1:active {
+  background-color: bisque;
+  box-shadow:
+   inset 0 0 5px 3px rgba(0,0,0,.8),
+   inset rgba(0,0,0,.3) -5px -5px 8px 5px,
+   inset rgba(255,255,255,.5) 5px 5px 8px 5px,
+   1px 1px 1px rgba(255,255,255,.2),
+   -2px -2px 5px rgba(0,0,0,.5);
+}
+}
+.text{
+   border-radius: 40%;
+    height: 50px;
+    width: 300px;
+    font-size: 40px;
+    text-align: center;
+  background-color:  lightgrey;
+}
+img{
+    border-radius: 30px;
+}
+.t1{
+    border-radius: 30px;
+     line-height: 40px;
+    width: 70%;
+     background-color: antiquewhite;
+}
+hr{
+    color: black;
+    height: 2px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    width: 500;
+    background-color: black;
+}
+radio{
+    font-size: 13px;
+    display: inline-block;
+    cursor: pointer;
+    position:fixed;
+
+    
+}
+table{
+    font-size: 20px;
+    font-family: 'Cookie-Regular', cursive;
+}

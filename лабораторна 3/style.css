@@ -1,0 +1,86 @@
+body{
+    font-family: 'Cookie-Regular', cursive;
+    font-size: 30px;
+    color:black;
+    line-height: 40px;
+    background: url("fon.jpg")center no-repeat;
+    background-size: cover;
+ background-size: cover;
+}
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: pink;
+    
+}
+
+.button{
+    background-color: lightgrey;
+    color: black;
+    height: 50px;
+    width: 200px;
+    border-radius: 30%;
+    font-size: 30px;
+}
+.button1{
+    background-color: lightgrey;
+    color: black;
+    height: 30px;
+    width: 100px;
+    border-radius: 30%;
+    font-size: 15px;
+    margin-left: auto;
+}
+.text{
+   border-radius: 40%;
+    height: 50px;
+    width: 300px;
+    font-size: 40px;
+    text-align: center;
+  background-color:  lightgrey;
+}
+img{
+    border-radius: 30px;
+}
+.t1{
+    border-radius: 30px;
+     line-height: 40px;
+    width: 70%;
+     background-color: antiquewhite;
+}
+hr{
+    color: black;
+    height: 2px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    width: 500;
+    background-color: black;
+}
+radio{
+    font-size: 13px;
+    display: inline-block;
+    cursor: pointer;
+    position:fixed;
+
+    
+}
+table{
+    font-size: 40px;
+    font-family: 'Cookie-Regular', cursive;
+}

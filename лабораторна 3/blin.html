@@ -1,0 +1,182 @@
+01
+<fieldset class="js-tree-box">
+02
+    <legend>
+03
+        <label><input type="checkbox" name="obl[]" value="61" />Ростовская</label>
+04
+    </legend>
+05
+    <label><input type="checkbox" name="gorod[]" value="346780">Азов</label>
+06
+    <label><input type="checkbox" name="gorod[]" value="346400">Новочеркасск</label>
+07
+    <label><input type="checkbox" name="gorod[]" value="344000">Ростов-на-Дону</label>
+08
+    <label><input type="checkbox" name="gorod[]" value="347900">Таганрог</label>
+09
+</fieldset>
+10
+<fieldset class="js-tree-box">
+11
+    <legend>
+12
+        <label><input type="checkbox" name="obl[]" value="61" />Ростовская</label>
+13
+    </legend>
+14
+    <label><input type="checkbox" name="gorod[]" value="346780">Азов</label>
+15
+    <label><input type="checkbox" name="gorod[]" value="346400">Новочеркасск</label>
+16
+    <label><input type="checkbox" name="gorod[]" value="344000">Ростов-на-Дону</label>
+17
+    <label><input type="checkbox" name="gorod[]" value="347900">Таганрог</label>
+18
+</fieldset>
+19
+…и так далее.
+20
+ 
+21
+<script>
+22
+(function(){ // этот кусок кода автономен, выносим в отдельную область данных
+23
+    function clicker(e){ // выполняется при любом кликие или изменении
+24
+        var legendObject;
+25
+        var fieldsetObject;
+26
+        var controlCheckbox;
+27
+         
+28
+        var trigger = e.srcElement||e.target; // кто вызвал событие?
+29
+        if (!trigger.tagName || trigger.tagName.toLowerCase() != "input" || trigger.type.toLowerCase() != "checkbox") return; // если это не чекбокс — делать нам тут нечего
+30
+         
+31
+        // пробегаемся по всем родителям
+32
+        var testElement = trigger;
+33
+        while (testElement){
+34
+            if (!testElement.tagName) return; // неявно — корень дерева, и мы ничего не нашли
+35
+            var tagName = testElement.tagName.toLowerCase();
+36
+            if (tagName == "legend") { // по пути встретили legend
+37
+                legendObject = testElement;
+38
+            } else if (tagName == "fieldset" && /(^|\s)+js-tree-box(\s|$)+/.test(testElement.className)) { // или fieldset с нужным классом
+39
+                fieldsetObject = testElement;
+40
+                break;
+41
+            }
+42
+            testElement = testElement.parentNode; // выбираем родителя и повторяем итерацию для него
+43
+        };
+44
+        if (!fieldsetObject) return;
+45
+        if (legendObject){ // т.е., чекбокс внутри легенды
+46
+            var controlCheckboxValue = trigger.checked;
+47
+            var inputs = fieldsetObject.getElementsByTagName("input");
+48
+            for(var i=0; i<inputs.length; i++){
+49
+                var input = inputs[i];
+50
+                if (input.type.toLowerCase() == "checkbox" && input != controlCheckbox){
+51
+                    input.checked = controlCheckboxValue;
+52
+                };
+53
+            };
+54
+        } else {
+55
+            // находим «контрольный» чекбокс
+56
+            if (legendObject = fieldsetObject.getElementsByTagName("legend")[0]){
+57
+                var inputs = legendObject.getElementsByTagName("input");
+58
+                for(var i=0; i<inputs.length; i++){
+59
+                    var input = inputs[i];
+60
+                    if (input.type.toLowerCase() == "checkbox"){
+61
+                        controlCheckbox = input;
+62
+                        break;
+63
+                    };
+64
+                };
+65
+            };
+66
+            if (!controlCheckbox) return;
+67
+            var controlCheckboxValue = true;
+68
+            // пробегаемся по всем чекбоксам
+69
+            var inputs = fieldsetObject.getElementsByTagName("input");
+70
+            for(var i=0; i<inputs.length; i++){
+71
+                var input = inputs[i];
+72
+                // есть неотмеченные?
+73
+                if (input.type.toLowerCase() == "checkbox" && input != controlCheckbox && !input.checked){
+74
+                    controlCheckboxValue = false;
+75
+                };
+76
+            };
+77
+            // устанавливаем значение в контрольный
+78
+            controlCheckbox.checked = controlCheckboxValue;
+79
+        }
+80
+    };
+81
+     
+82
+    // щелчков будет намного меньше, чем элементов — отлавливаем события через bubbling
+83
+    if (document.addEventListener){
+84
+        document.addEventListener('change', clicker, false);
+85
+        document.addEventListener('click', clicker, false);
+86
+    } else {
+87
+        document.attachEvent('onchange', clicker);
+88
+        document.attachEvent('onclick', clicker);
+89
+    };
+90
+})();
+91
+</script>

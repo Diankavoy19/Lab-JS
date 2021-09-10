@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <title>Test</title>
+        <link rel="stylesheet" href="style3.css" />
+        <script>
+            
+            function result()
+            {
+                var r=0;
+                for(var i=0;i<30;i++)
+                    {
+                    if (document.test.elements[i].checked){
+                        
+                        r =r+ Number(document.test.elements[i].value)
+                    }
+            }
+                if(r<=0)
+                    {
+                        alert(`Правильні відповіді: 0/0. Старайтеся краще!  `)
+                    }
+                if(r==10)
+                    {
+                        alert(`Правильні відповіді:10/10. Результат відмінний. Вітаю!`)
+                    }
+                if(r<5 &&r!=0)
+                    {
+                        alert(`Правильні відповіді:${r}/10. Результат задовільний.`)
+                    }
+                if(r>5 && r!=10)
+                    {
+                        alert(`Правильні відповіді:${r}/10. Результат хороший. Так тримати!`)
+                    }
+                
+            }
+            
+        </script>
+        </head>
+    <body >
+        <center>
+        <form name="test" class="form1">
+            <table class="table">
+                <tr>
+                    <td><h2>1.Що таке HTML?</h2></td></tr>
+                <tr>
+                    <td>
+                        <table>
+                        <tr><td><input type="radio" name="a" class="button"  value=1>Текстова мова розмітки, призначена для маркування документів,що містять текст,зображення,гіперпосилання,тощо.</td>
+                            <tr><td><input type="radio" name="a" class="button"  value=0>Ієрархічна модель документа.</td></tr>
+                        <tr><td><input type="radio" class="button" name="a" value=0>Динамічна, об'єктно-орієнтована прототипна мова програмування.</td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td><h2>2.З яких частин складається HTML-документ?</h2></td></tr>
+                <tr>
+                    <td>
+                        <table>
+                        <tr><td><input type="radio" class="button" name="t" value=0>Рук і ніг.</td>
+                            <tr><td><input type="radio" class="button" name="t" value=0>Заголовку і підвалу.</td></tr>
+                        <tr><td><input type="radio" class="button" name="t" value=1>Голови і тіла.</td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td><h2>3.Чи можна однаково відформатувати текст, використовуючи різні теги?</h2></td></tr>
+                <tr>
+                    <td>
+                        <table>
+                        <tr><td><input type="radio" class="button" name="и" value=0>Ні.</td>
+                            <tr><td><input type="radio"class="button"  name="и" value=0>Іноді.</td></tr>
+                        <tr><td><input type="radio"class="button"  name="и" value=1>Так.</td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td><h2>4.Як розшифровується HTML?</h2></td></tr>
+                <tr>
+                    <td>
+                        <table>
+                        <tr><td><input type="radio" name="b" class="button" value=1>Hyper Text Markup Language</td>
+                            <tr><td><input type="radio" name="b" class="button" value=0>Typerlinks and Text Markup Language</td></tr>
+                        <tr><td><input type="radio" name="b"class="button"  value=0>Hyper-Phrase Marketing Language</td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td><h2>5.Чому код JavaScript розміщується тільки до закриття тега body?</h2></td></tr>
+                <tr>
+                    <td>
+                        <table>
+                        <tr><td><input type="radio" class="button" name="c" value=1>Щоб дозволити сторінці повністю завантажитися у вікні браузера.</td>
+                            <tr><td><input type="radio" class="button" name="c" value=0>Це єдиний можливий спосіб.</td></tr>
+                        <tr><td><input type="radio" class="button" name="c" value=0>Для дотримання стандарту.</td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td><h2>6.Яким буде результат виразу var1&&var2,якщо var1=true і var2=false.</h2></td></tr>
+                <tr>
+                    <td>
+                        <table>
+                        <tr><td><input type="radio" class="button" name="d" value=0>True.</td>
+                            <tr><td><input type="radio" class="button" name="d" value=1>False.</td></tr>
+                        <tr><td><input type="radio" class="button" name="d" value=0>Undefined.</td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td><h2>7.Який правильний синтаксис для посилання на зовнішній скрипт "script.js"?</h2></td></tr>
+                <tr>
+                    <td>
+                        <table>
+                        <tr><td><input type="radio" class="button" name="f" value=0>script name="script.js"</td>
+                            <tr><td><input type="radio" class="button" name="f" value=0>script href="script.js"</td></tr>
+                        <tr><td><input type="radio" class="button" name="f" value=1>script src="script.js"</td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td><h2>8.Чи можливо опрацювати більшість подій в одному елементі HTML?</h2></td></tr>
+                <tr>
+                    <td>
+                        <table>
+                        <tr><td><input type="radio" class="button" name="j" value=1>Так</td>
+                            <tr><td><input type="radio" class="button" name="j" value=0>Ні</td></tr>
+                        <tr><td><input type="radio" class="button" name="j" value=0>Рідко</td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td><h2>9.Що з нижчеперечисленого є одною з нових функцій ES6?</h2></td></tr>
+                <tr>
+                    <td>
+                        <table>
+                        <tr><td><input type="radio" name="h"class="button"  value=0>Modules</td>
+                            <tr><td><input type="radio" name="h" class="button" value=1>Hoisting</td></tr>
+                        <tr><td><input type="radio" name="h" class="button" value=0>Object destructuring</td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td><h2>10.JavaScript і ES6-це різні технології для різних цілей?</h2></td></tr>
+                <tr>
+                    <td>
+                        <table>
+                        <tr><td><input type="radio" name="r"class="button"  value=0>Так</td>
+                            <tr><td><input type="radio" class="button" name="r" value=0>Іноді</td></tr>
+                        <tr><td><input type="radio" class="button" name="r" value=1>Ні</td>
+                            </tr>
+                        </table></td>
+                </tr>
+            </table>
+             <button id = "r" class="button1"  onClick="result()">Побачити результат</button>
+        </form>
+        </center>
+    </body>
+</html>

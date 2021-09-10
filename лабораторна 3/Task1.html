@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Калькулятор</title>
+        <link rel="stylesheet" href="style.css" />
+        <script>
+            function ds(radius) 
+            {
+                if(radius==""||isNaN(radius))
+                {alert("Введіть значення радіуса!")}
+                else{
+                if(document.form1.elements[1].checked)
+                    {
+                        form1.result.value=parseFloat((radius*2*Math.PI).toFixed(5));
+                    }
+                else if(document.form1.elements[2].checked)
+                    {
+                        form1.result.value=parseFloat((radius*radius*Math.PI).toFixed(5));
+                    }
+                else if(document.form1.elements[3].checked)
+                    {
+                        form1.result.value = parseFloat(((4 / 3) * Math.PI * Math.pow(radius,3)).toFixed(5));
+                      
+                    }
+                }
+                
+    }
+        </script>
+    </head>
+    <body >
+        <center>
+        <form name="form1" class="form1">
+            <br>
+            <br>
+            <h3 size="30px">Введіть значення радіуса кола:</h3><br>
+            <input type="text" class="text" name="radius" size=10>
+            <hr> 
+            <table>
+                <tr>
+                    <td><input type="radio" class="button1"name="fv"  onClick="ds(radius.value)">довжина кола</td></tr>
+                <tr>
+                    <td><input type="radio"  class="button1"name="fv"  onClick="ds(radius.value)">площа круга</td></tr>
+                <tr>
+                    <td><input type="radio"  class="button1"name="fv" onClick="ds(radius.value)">об'єм кулі</td> 
+                </tr></table>
+            <input type="reset" name="reset" value="Очистити" class="button">
+            <hr>
+            <font size="60px">Результат:</font><br><br>
+            <input type="text"class="text" name="result" size=10>
+        </form>
+        </center>
+    </body>
+</html>
