@@ -1,0 +1,41 @@
+body{
+    font-family: 'Cookie-Regular', cursive;
+    font-size: 20px;
+    color:black;
+    line-height: 100px;
+    background-color:antiquewhite;
+}
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: pink;
+    
+}
+
+.button{
+    background-color:burlywood;
+    color: black;
+    height: 90px;
+    width: 160px;
+    border-radius: 30%;
+    font-size: 15px;
+}
+.table{
+    background: pink;
+    
+}

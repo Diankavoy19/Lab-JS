@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Перестановка зображень</title>
+<meta charset="utf-8" >
+    <script>
+        function chan(obj){
+            var r1=Number(obj.a1.value);
+            var r2=Number(obj.a2.value);
+            if((r1<1)||(r1>6)||(r2<1)||(r2>6))
+                alert("Неправильно задані номериображення!");
+            var z = document.images[r1-1].src;
+            document.images[r1-1].src = document.images[r2-1].src;
+            document.images[r2-1].src=z;
+                
+        }
+    </script>
+    <link rel="stylesheet" href="style1.css" />
+    </head>
+    <body>
+        <center>
+            <h4>Галерея зображень</h4><br>
+            <table>
+            <tr>
+                <td><img src="pict1.jpg" width="200" height="160" name="pic1"></td>
+                <td><img src="pict2.jpg" width="200" height="160" name="pic2"></td>
+                <td><img src="pict3.jpg" width="200" height="160"name="pic3"></td>
+                <td><img src="pict4.jpg" width="200" height="160" name="pic4"></td>
+                <td><img src="pict5.jpg" width="200" height="160" name="pic5"></td>
+                <td><img src="pict6.jpg" width="200" height="160" name="pic6"></td>
+                </tr></table>
+            <form name="form_name">
+                Зображення з номерами<br>
+                <input type="text" class="text" name="a1" size="1">
+                <input type="text" class="text" name="a2" size="1">
+                <input type="button" class="button" value="Поміняти місцями" size="1" onclick="chan(form_name)">
+                <br><br><input type="reset" class="button" value=" Очистити форму">
+            </form>
+        </center>
+    </body>
+</html>

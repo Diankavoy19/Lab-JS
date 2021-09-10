@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Просте горизонтальне меню</title>
+<meta charset="utf-8" >
+    <script>
+        function im(n,action)
+        {
+            if(action)
+                document.images[n-1].src="obr"+n+".jpg"
+            else
+                document.images[n-1].src="file"+n+".jpg"
+        }
+    </script>
+    <link rel="stylesheet" href="style2.css" />
+    </head>
+    <body link="#0000EE" vlink="#551A8B" alink="#FF0000">
+        <center>
+        <font color="#0000FF">
+        <h2>Зміст</h2>
+            <table>
+            <tr>
+                <td><a href="ch1.html" onMouseOver="im(1,1)" onMouseOut="im(1,0)">
+                    <img src="ch1.html" alt="Форматування тексту" border="0" width="200" height="200"></a></td><br>
+                <td><a href="ch2.html" onMouseOver="im(2,1)" onMouseOut="im(2,0)">
+                    <img src="" alt="Створення списків" border="0" width="200" height="200"></a></td><br>
+                <td><a href="ch3.html" onMouseOver="im(3,1)" onMouseOut="im(3,0)">
+                    <img src="" alt="Побудова таблиць" border="0" width="200" height="200"></a></td><br>
+                <td><a href="ch4.html" onMouseOver="im(4,1)" onMouseOut="im(4,0)">
+                    <img src="" alt="Використання графіки" border="0" width="200" height="200"></a></td><br>
+                <td><a href="ch5.html" onMouseOver="im(5,1)" onMouseOut="im(5,0)">
+                    <img src="" alt="Імпорт/ Експорт" border="0" width="200" height="200"></a></td><br>
+                <td><a href="ch6.html" onMouseOver="im(6,1)" onMouseOut="im(6,0)">
+                    <img src="" alt="Використання форм" border="0" width="200" height="200"></a><br></td>
+                </tr>
+            </table>
+            </font>
+        </center>
+    </body>
+</html>

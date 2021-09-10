@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Класифікація студентів</title>
+<meta charset="utf-8" >
+    `<link rel="stylesheet" href="style2.css" />
+    <script>
+        function student(n){
+            var vidm=0;
+            var horosh=0;
+            var vstig=0;
+            var nevstig=0;
+            var vidmsurnames="";
+            var horoshsurnames="";
+            var vstigsurnames="";
+            var nevstigsurnames="";
+            var d=document;
+            for(var i=0; i<n;i++){
+                var s= parseInt(prompt('Введіть прізвище студента'));
+                var k1=parseInt(prompt('Введіть оцінку першої контрольної роботи'));
+                var k2=parseInt(prompt('Введіть оцінку другої контрольної роботи'));
+                if(k1==5 && k2==5){
+                    vidm++;
+                    vidmsurnames=vidmsurnames+s+"\n";
+                }
+                else if(k1>=4 && k2>=4){
+                    horosh++;
+                    horoshsurnames=horoshsurnames+s+"\n";
+                    
+                }
+                else if((k1==3 || k2==3)&& k1!=2 && k2!=2){
+                    vstig++;
+                    vstigsurnames=vstigsurnames+s+"\n";
+                }
+                else{
+                    nevstig++;
+                    nevstigsurnames=nevstigsurnames+s+"\n";
+                }
+            }
+            var tableHeight=300;
+            var allsurnames= vidmsurnames+ horoshsurnames+ vstigsurnames+ nevstigsurnames;
+                
+                d.images[0].height=vidm*(tableHeight/n); 
+                d.images[0].alt="Відмінники"+vidm+"\n"+vidmsurnames  ;
+                d.images[1].height=horosh*(tableHeight/n); 
+                d.images[1].alt="Хорошисти" +horosh+"\n"+horoshsurnames ;
+                d.images[2].height=vstig*(tableHeight/n); 
+                d.images[2].alt="Встигаючі "+vstig+"\n"+vstigsurnames;
+                d.images[3].height=nevstig*(tableHeight/n); 
+                d.images[3].alt="Невстигаючі"+nevstig+"\n"+nevstigsurnames ; 
+                d.images[4].height=n*(tableHeight/n);  
+                d.images[4].alt="Всього "+n+"\n"+allsurnames;  
+        }
+        function valNum(n){
+            if (n > 0) {
+                var form = document.getElementById('data');
+            }
+            else alert("Ви ввели неправильні данні");
+        }
+        
+        
+    </script>
+    </head>
+    <body>
+        <center>
+                <table width="300" cellspacing="2" cellpadding="2" border="1">
+                    <tr>
+                        <td>Кількість студентів:</td>
+                        <td><input type="text" onchange=valNum(this.value) id="n" size="12"></td> 
+                    </tr>
+                </table><br>
+            <form action="" id="data"></form>
+            <input type="button"  size="5" value="Побудувати діаграму " onclick="student(n.value)"><br><br>
+           <h4> Діаграма </h4><br> 
+      
+            <table width="212" class="t1" height="190" cellspacing="1" cellpadding="0"  border="0" >  
+                <tr valign="bottom" width="100 "align="center">  
+                    <td  height="200"><img src="fon.jpg" width="75" height="0" border="0" ></td>
+                    <td  height="200"><img src="fon.jpg" width="75" height="0" border="0" ></td>
+                    <td  height="200"><img src="fon.jpg"width="75 "height="0" border="0" ></td>
+                    <td  height="200"><img src="fon.jpg" width="75" height="0" border="0" ></td>
+                    <td height="200"><img src="fon.jpg"width="75" height="0" border="0" ></td>  
+                </tr>  
+                <tr valign="top" width="100" align="center" >  
+                    <td height="40"><small> Відмінники </small></td>  
+                    <td height="40"><small> Хорошисти </small></td>  
+                    <td height="40"><small> Встигаючі </small></td>  
+                    <td height="40"><small> Невстигаючі </small></td>  
+                    <td height="40"><small> Всього </small></td>  
+   
+                </tr>
+                </table>
+        </center>
+    </body>
+</html>

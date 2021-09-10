@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Дослідження властивостей зображень</title>
+<meta charset="utf-8" >
+    <script>
+function chipct(obj)
+{
+    w = parseInt(prompt('Введіть ширину зображення:'));
+    h= parseInt(prompt('Введіть довжину зображення:'));
+    if(w!=0) document.mypict.width=w;
+    if(h!=0) document.mypict.height=h;
+    document.mypict.border=parseInt(prompt('Введіть товщину рамки зображення:'));
+    document.mypict.alt=prompt('Введіть альтернативний текст зображення:');
+    document.mypict.style.borderRadius=prompt('Введіть радіус рамки зображення в пікселях:');
+    if(w==0 ) alert('Ширина повинна бути більше 0!');
+    if (h==0) alert('Висота  повинна бути більше 0!');
+}
+    </script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+    <body>
+        <center>
+            <h3>Вбудовувані зображення</h3>
+            <img src="mypict.jpg" name="mypict">
+            <form name="form_name" >
+        <input type="button" class="button" value="Змінити параметри" onclick="chipct(form_name)">
+            </form>
+            </center>
+    </body>
+</html>

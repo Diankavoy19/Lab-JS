@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Форми</title>
+</head>
+<style>
+table{
+background:pink;
+padding:20px;
+border-radius: 30px;}
+.button {
+  display: inline-block;
+  text-align: center;
+  margin: 0px;
+  width: 190px;
+  height: 40px;
+  background: lightgray;
+  cursor: pointer;
+  border-radius: 10px;
+
+  box-shadow: 0 3px 20px rgba(0,0,0,.25),
+  inset 0 2px 0 rgba(255,255,255,.6),
+  0 2px 0 rgba(0,0,0,.1),
+  inset 0 0 20px rgba(0,0,0,.1);
+}
+td.col1{background: rgb(69,69,69);
+padding:10 px;
+border-radius: 10px;}
+td.col2{background: pink;padding:10 px;
+border-radius: 10px;}
+td.col3{background: violet;padding:10 px;
+border-radius: 10px;}
+button{background: gray;}
+border1{ BORDERCOLORDARK="#ffffff"; BORDERCOLORLIGHT="#738278"}
+</style>
+<body Background="img/fon.jpg"  background=images/fon.jpg>
+<TABLE  bgcolor="pink" BORDER="2" class="border1" width="50%"  align="center" >
+<tr>
+<td class="col1" align="center" ><B><font color="white" size="4" face="Lucida Console">  З якими операційними системами ви працювали?</font><B></td></tr>
+<tr>
+
+<td class="col2" >
+<form >
+<input type="checkbox" name="system" value="os1"><font face="Lucida Console">DOS</font>
+<br>
+<input type="checkbox" name="system" value="os2"><font face="Lucida Console">Windows 3.1</font>
+<br>
+<input type="checkbox" name="system" value="os3"><font face="Lucida Console">Windows 95</font>
+<br>
+<input type="checkbox" name="system" value="os4"><font face="Lucida Console">Windows 98</font>
+<br>
+<input type="checkbox" name="system" value="os5"><font face="Lucida Console">Windows NT</font>
+<br>
+<input type="checkbox" name="system" value="os6"><font face="Lucida Console">Windows 2000</font>
+<br>
+<input type="checkbox" name="system" value="os7"><font face="Lucida Console">Windows XP</font>
+</td>
+</form>
+</tr>
+</table>
+<br>
+<TABLE  bgcolor="pink" BORDER="2" class="border1" width="50%"  align="center" >
+<tr>
+<td align="center" class="col1" ><B><font color="white"size="4" face="Lucida Console">Оберіть вид розрахунку:</font><B></td></tr>
+<tr>
+<td class="col2" >
+<form>
+<input type="radio" name="moneytype" value="cash"><font face="Lucida Console">Готівка</font>
+<br>
+<input type="radio" name="moneytype" value="cash"><font face="Lucida Console">Visa</font>
+<br>
+<input type="radio" name="moneytype" value="cash"><font face="Lucida Console">Visa Electron</font>
+<br>
+<input type="radio" name="moneytype" value="cash"><font face="Lucida Console">Mastercard</font>
+<br>
+<input type="radio" name="moneytype" value="cash"><font face="Lucida Console">American Express</font>
+<br>
+<button class="button"><FONT size"3" face="Lucida Console" ><p>Здійснити покупку</p></button></font>
+</table>
+<TABLE  bgcolor="pink" BORDER="2" class="border1" width="50%"  align="center" >
+<tr>
+<td class="col2" >
+<form action=money.php>
+<legend>
+<fieldset>
+<legend>Оберіть вид розрахунку</legend><br>
+<select multiple>
+<option selected value="cash"><font face="Lucida Console">Готівка</font></option>
+<option value="visa"><font face="Lucida Console">Visa</font></option>
+<option value="visa electron"><font face="Lucida Console">Visa Electron</font></option>
+<option value="mastercard"><font face="Lucida Console">Mastercard</font></option>
+<option value="american express"><font face="Lucida Console">American Express</font></option>
+</fieldset>
+</form>
+<br>
+<tr><td>
+<button class="button"><FONT size"3" face="Lucida Console" ><p>Здійснити покупку</p></button></font>
+</td>
+</tr>
+</table>

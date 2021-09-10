@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Класифікація студентів</title>
+<meta charset="utf-8" >
+    `<link rel="stylesheet" href="style3.css" />
+    <script>
+        function workers(n){
+            var d=document;
+            var lessthenoneyear=0;
+            var oneyear=0;
+            var twoyear=0;
+            var threeyear=0;
+            var fouryear=0;
+            var fiveyear=0;
+            var morefiveyear=0;
+            var lessthenoneyearsurnames="";
+            var oneyearsurnames="";
+            var twoyearsurnames="";
+            var threeyearsurnames="";
+            var fouryearsurnames="";
+            var fiveyearsurnames="";
+            var morefiveyearsurnames="";
+            for(var i=0; i<n;i++){
+                var s= parseInt(prompt('Введіть прізвище співробітника'));
+                var years=parseInt(prompt('Рік прийому на роботу'));
+                if(years>0){
+                    var stag= 2020-years;
+                    if(stag<1){
+                        lessthenoneyear++;
+                        lessthenoneyearsurnames=lessthenoneyearsurnames+s+"\n";
+                    }
+                    else if(stag==1)
+                        {
+                            oneyear++;
+                            oneyearsurnames=oneyearsurnames+s+"\n";
+                        }
+                    else if(stag==2)
+                        {
+                            twoyear++;
+                            twoyearsurnames=twoyearsurnames+s+"\n";
+                        }
+                    else if(stag==3)
+                        {
+                            threeyear++;
+                            threeyearsurnames=threeyearsurnames+s+"\n";
+                        }
+                    else if(stag==4)
+                        {
+                            fouryear++;
+                            fouryearsurnames=fouryearsurnames+s+"\n";
+                        }
+                    else if(stag==5)
+                        {
+                            fiveyear++;
+                            fiveyearsurnames=fiveyearsurnames+s+"\n";
+                        }
+                        
+                    else {
+                            morefiveyear++;
+                            morefiveyearsurnames=morefiveyearsurnames+s+"\n";
+                        }
+                }
+                    
+                else {
+                    alert("Рік введено неправильно")
+                }
+            }
+                var tableHeight=500;
+                   var allsurnames= lessthenoneyearsurnames+oneyearsurnames+twoyearsurnames+threeyearsurnames+fouryearsurnames+fiveyearsurnames+morefiveyearsurnames;
+                d.images[0].height=lessthenoneyear*(tableHeight/n); 
+                d.images[0].alt=" менше 1 року"+lessthenoneyear+"\n"+lessthenoneyearsurnames  ;
+                d.images[1].height=oneyear*(tableHeight/n); 
+                d.images[1].alt="1 роки" +oneyear+"\n"+oneyearsurnames ;
+                d.images[2].height=twoyear*(tableHeight/n); 
+                d.images[2].alt="2 роки "+twoyear+"\n"+twoyearsurnames;
+                d.images[3].height=threeyear*(tableHeight/n); 
+                d.images[3].alt="3 роки"+threeyear+"\n"+threeyearsurnames ; 
+                d.images[4].height=fouryear*(tableHeight/n);  
+                d.images[4].alt="4 роки "+fouryear+"\n"+fouryearsurnames; 
+                d.images[5].height=fiveyear*(tableHeight/n);  
+                d.images[5].alt="5 роки "+fiveyear+"\n"+fiveyearsurnames; 
+                d.images[6].height=morefiveyear*(tableHeight/n);  
+                d.images[6].alt="Більше 5 років "+morefiveyear+"\n"+morefiveyearsurnames; 
+                d.images[7].height=n*(tableHeight/n);  
+                d.images[7].alt="Всього "+n+"\n"+allsurnames;
+                        d.images[4].alt="Всього "+n+"\n"+allsurnames;  
+        }
+        function valNum(n){
+            if (n > 0) {
+                var form = document.getElementById('data');
+            }
+            else alert("Ви ввели неправильні данні");
+        }
+            </script>
+    </head>
+    <body>
+        <center>
+                <table width="300" cellspacing="2" cellpadding="2" border="1">
+                    <tr>
+                        <td>Кількість співробітників:</td>
+                        <td><input type="text" onchange=valNum(this.value) id="n" size="12"></td> 
+                    </tr>
+                </table><br>
+            <form action="" id="data"></form>
+            <input type="button"  size="5" value="Побудувати діаграму " onclick="workers(n.value)"><br><br>
+           <h4> Діаграма </h4><br> 
+      
+            <table width="250" class="t1" height="200" cellspacing="1" cellpadding="0"  border="0" >  
+                <tr valign="bottom" width="100 "align="center">  
+                    <td  height="200"><img src="fon1.jpg" width="75" height="0" border="0" ></td>
+                    <td  height="200"><img src="fon1.jpg" width="75" height="0" border="0" ></td>
+                    <td  height="200"><img src="fon1.jpg"width="75 "height="0" border="0" ></td>
+                    <td  height="200"><img src="fon1.jpg" width="75" height="0" border="0" ></td>
+                    <td height="200"><img src="fon1.jpg"width="75" height="0" border="0" ></td>  
+                    <td  height="200"><img src="fon1.jpg"width="75 "height="0" border="0" ></td>
+                    <td  height="200"><img src="fon1.jpg" width="75" height="0" border="0" ></td>
+                    <td height="200"><img src="fon1.jpg"width="75" height="0" border="0" ></td>
+                </tr>  
+                <tr valign="top" width="100" align="center" >  
+                    <td height="40"><small> Стаж менше року </small></td>  
+                    <td height="40"><small> 1 рік стажу </small></td>  
+                    <td height="40"><small> 2 роки стажу </small></td>  
+                    <td height="40"><small>3 роки стажу </small></td> 
+                    <td height="40"><small>4 роки стажу </small></td>
+                    <td height="40"><small>5 роки стажу </small></td>
+                    <td height="40"><small>Більше 5 років стажу </small></td>
+                    <td height="40"><small> Всього </small></td>  
+   
+                </tr>
+                </table>
+        </center>
+    </body>
+                   
