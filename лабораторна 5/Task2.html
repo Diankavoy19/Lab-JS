@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Functions</title>
+        <link rel="stylesheet" href="style1.css">
+        <script>
+            function sum(n){
+    var x = n;         
+    return function(m){ return x + m;};
+}
+var result = sum(3)(3); //result-замикання, яке містить і внутрішню функцію function (m) {return x * m;}, і змінну x, яка існувала під час створення замикання.
+document.write("Result"+":"+"\n"+result);
+            
+             </script>
+    </head>
+    <body>
+        <center>
+        <form class="t1">
+            <p>Книги для читання на карантині:</p>
+            <center>
+               <table>
+                   <tr>
+                       <td>1.<a href="https://www.e-reading-lib.com/book.php?book=1017120">Міла Рудик і Чаша Місячного Світла </a><br></td></tr>
+                   <tr><td>2.<a href="https://www.e-reading-lib.com/book.php?book=1017371">Міла Рудик і загадка Сфінкса </a><br></td></tr>
+                   <tr><td>3.<a href="https://www.e-reading-lib.com/book.php?book=1017780">Міла Рудик і кристал Фобоса  </a><br></td></tr>
+                   <tr><td>4.<a href="https://www.e-reading-lib.com/book.php?book=1017927">Міла Рудик і руїни Харакса </a><br></td></tr>
+                   <tr><td>5.<a href="https://www.e-reading-lib.com/book.php?book=1017928">Міла Рудик і магічний синод  </a><br></td></tr>
+                   <tr><td>6.<a href="https://www.e-reading-lib.com/book.php?book=1019333">Мила Рудик і таємниця шостого адепта</a><br></td></tr>
+                </table> </center>   
+            </form></center></body></html>
+ 

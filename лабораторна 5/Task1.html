@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Functions</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            
+            function checkAge(age) {
+  if (age > 17) {
+    return true;
+  } else {
+    return confirm('А родители разрешили?');
+  }
+}
+let age = prompt('Сколько вам лет?', 18);
+
+if ( checkAge(age) ) {
+  alert( 'Доступ получен' );
+} else {
+location.href = "t1.html";
+}
+</script>
+    </head>
+        <body  link="red" alink="orange" vlink="blue">
+            <center>
+<div class="t1">
+    <form class="form1">
+<h1 align="center" color="Black" >Серіали для перегляду:</h1>
+<p align="center" ><a href="https://friends-online.me/">Серіал "Друзі"</a></p>
+<p align="center"><a href="http://seasonvar.ru/serial-15582-Anne.html">Серіал "Енн"</a></p>
+    <p align="center"><a href="http://kinoflux.org/19468-aykarli-2007-2012-icarly.html">Серіал "Ай-Карлі"</a></p>
+    <p align="center"><a href="http://kinanema.net/load/seriali/charivniki_z_vejverli_plejs_1_2_3_4_sezon_2007_2012/116-1-0-5769">Серіал "Чарівники з Вейверлі Плейс"</a></p>
+    <p align="center"><a href="http://seasonvar.ru/serial-388-H2O_Prosto_dobav__vodi-1-season.html">Серіал "H2O"</a></p>
+    <p align="center"><a href="http://moviestape.net/katalog_serialiv/detektyvy/1530-kistky.html">Серіал "Кістки"</a></p>
+    <h1 align="center" color="Black" >Фільми для перегляду:</h1>
+<p align="center"><a href="http://wiz-art.com.ua/film/simya-po-shvydkomu">Фільм "Сім'я по-швидкому"</a></p>
+<p align="center"><a href="http://kinoline-hd.net/load/drama/v_poiskakh_mamy/14-1-0-2315">Фільм "В пошуках мами"</a></p>
+        </form>
+</div></center>
+        </body></html>

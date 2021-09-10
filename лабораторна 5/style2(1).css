@@ -1,0 +1,27 @@
+body{
+    font-family: 'Trattatello', fantasy;
+    font-size: 38px;
+    color:white;
+    line-height: 50px;
+    background-image: url(tenor.gif);
+    background-size: 100%;
+    align-content: center;
+    text-align: center;
+     border-radius: 20px;
+
+}
+.t1{
+    background-color: pink;
+    height: 400px;
+    width: 800px;
+    border-radius: 30px;
+}
+li{
+    text-align: center;
+    align-content: center;
+    left:400px;
+}
+table{
+    font-size: 38px;
+     align-content: center;
+}
