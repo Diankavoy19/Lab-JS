@@ -1,2 +1,2 @@
 # Lab-JS
-All JS laboratory  at the university
+All JS laboratories  at the university
