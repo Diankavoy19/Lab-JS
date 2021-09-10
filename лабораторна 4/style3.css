@@ -1,0 +1,225 @@
+body{
+    font-family: 'Cookie-Regular', cursive;
+    font-size: 40px;
+    color:black;
+    line-height: 60px;
+    background-image: url("a2.gif") ;
+  background-size:100%;
+background-attachment: fixed;
+}
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.form1{
+    background-color: #f1f1f1;
+    height: 450%;
+    width: 70%;
+    border-radius: 40px;
+}
+
+.button{
+    background-color: lightgrey;
+    color: black;
+    height: 30px;
+    width: 100px;
+    border-radius: 30%;
+    font-size: 30px;
+}
+.button1{
+color:azure;
+    left:150px;
+   position: relative;
+  display: inline-block;
+  width: 9em;
+  height: 2.5em;
+  line-height: 2.4em;
+  vertical-align: middle;
+  text-align: center;
+  user-select: none;
+  outline: none;
+  border: 1px solid rgba(110,121,128,.8);
+  border-top-color: rgba(0,0,0,.3);
+  border-radius: 20px;
+  background: rgb(206, 220, 231) linear-gradient(rgb(47,182,60), rgb(89,106,114));
+  box-shadow:
+   0 -1px rgba(10,21,28,.9) inset,
+   0 1px rgba(255,255,255,.5) inset;
+    font-size: 23px;
+}
+.button1:hover {
+  background: linear-gradient(#d2dfea, #71828c);
+}
+.button1:active {
+  line-height: 2.6em;
+  background: linear-gradient(#bac6cf, #c5d3de 20%, #71828c);
+  box-shadow: 0 -1px rgba(255,255,255,.4) inset;
+}
+.button1:before {
+  content: "";
+  position: absolute;
+  top: -10px; right: -10px; bottom: -10px; left: -10px;
+  z-index: -1;
+  border-radius: 8px;
+  background: linear-gradient(rgba(200,200,200,.5), rgba(240,240,240,.5));
+}
+.text{
+   border-radius: 40%;
+    height: 50px;
+    width: 300px;
+    font-size: 40px;
+    text-align: center;
+  background-color:  lightgrey;
+}
+img{
+    border-radius: 30px;
+}
+.t1{
+    border-radius: 30px;
+     line-height: 40px;
+    width: 70%;
+}
+.t2{
+    border-radius: 30px;
+     line-height: 40px;
+    width: 70%;
+}
+.t3{
+    border-radius: 30px;
+     line-height: 40px;
+    width: 70%;
+}
+.t5{
+    border-radius: 30px;
+     line-height: 40px;
+    width: 70%;
+}
+hr{
+    color: black;
+    height: 2px;
+    width: 1000;
+    
+}
+radio{
+    font-size: 13px;
+    display: inline-block;
+    cursor: pointer;
+    position:fixed;
+
+    
+}
+table{
+    font-size: 20px;
+    font-family: 'Cookie-Regular', cursive;
+    
+}
+hr{
+    width: 500;
+    color: black;
+}
+textarea{
+     background-color: #f1f1f1;
+    border-radius: 20px;
+    left:70px;
+    text-align: center;
+    width: 390px;
+    align-content: center;
+    position: relative;
+    font-size: 13px;
+   
+}
+.container {
+  display: block;
+  position:relative;
+  padding-left: 35px;
+  margin-bottom: 22px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius:13px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+    border-radius:20px;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color:forestgreen;
+  border-radius:20em 4.5em/5em 4.5em;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #2fb63c;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2fb63c;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 7px;
+  top: 1px;
+  width: 12px;
+  height: 19px;
+  border: solid white;
+  border-width: 0 3px 5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.e{
+    border-radius: 15px;
+    color: black;
+    background-color: #2fb63c;
+    width: 100px;
+    text-align: right;
+    font-size: 40px;
+    align-content: center;
+    left: 70px;
+}
+.r{
+    font-size: 30px;
+    text-align: right;
+    left: 70px;
+}
+

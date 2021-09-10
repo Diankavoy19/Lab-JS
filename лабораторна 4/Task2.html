@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Анкета перекладача</title>
+        <link rel="stylesheet" href="style1.css" />
+        <script>
+
+   window.onload = function() {
+
+  document.forms.formText.onclick = function() {
+
+    var sum = 0,
+
+      els = this.querySelectorAll('input[type="checkbox"]:checked');
+
+    for (var i = 0; i < els.length; i++) {
+
+      sum += +els[i].value;
+
+    }
+
+    this.sumOut.value = sum;
+
+  };
+
+};
+             var s="Підрахунок:\n";
+            function set(vch) 
+            {
+                if(s.indexOf(vch)<0)
+                s=s+vch+"\n";
+                else s=s.replace(vch+"\n",'');
+                document.formText.area.value=s;
+    }
+
+</script>
+</head>
+    <body >
+         <center>
+            <form name="formText" class="form1">
+                <p> Якими мовами Ви володієте?</p>
+                <table class="t1">
+                    <td >
+                        <label class="container">
+                        <input type="checkbox" class="button" name="m1" id="m1" value="+100"onclick="set(formText.elements[0].value)"><b>Англійська</b> 
+                            <span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="m2" id="m1" value="+700" onclick="set(formText.elements[1].value)"><b>Іспанська</b> <span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="m3" id="m1" value="+300" onclick="set(formText.elements[2].value)"><b>Німецька</b> <span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="m4" id="m1" value="+400"onclick="set(formText.elements[3].value)" ><b>Французька</b><span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="m5" id="m1" value="+500" onclick="set(formText.elements[4].value)"><b>Російська</b><span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="m6" id="m1" value="+600"onclick="set(formText.elements[5].value)" ><b>Італійська</b><span class="checkmark"></span></label>
+                        <label class="container">
+                        <input type="checkbox" class="button" name="m7" id="m1" value="+200" onclick="set(formText.elements[6].value)"><b>Китайська </b><span class="checkmark"></span></label>
+                                                    </td>
+                <td>
+                    <table>
+                        <tr>
+                        <td><textarea name="area" cols="40" rows="10"></textarea><br>
+                    <input type="reset"  class="button1"value="Очистити" onclick="s='Підрахунок:\n'"></td></tr>
+                <tr>
+                <td class="r"><br>Ціна послуги:
+
+  <br>
+                    <input type="text" name="sumOut" class="e" disabled="false" value="">грн.</td></tr></table></td></table>
+             </form></center>
+        
+    </body>
+</html>

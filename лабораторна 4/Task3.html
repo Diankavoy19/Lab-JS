@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>Обробка анкети слухача курсів</title>
+        <link rel="stylesheet" href="style3.css" />
+        <script>
+
+   window.onload = function() {
+
+  document.forms.formText.onclick = function() {
+
+    var sum = 0,
+
+      els = this.querySelectorAll('input[type="checkbox"]:checked');
+
+    for (var i = 0; i < els.length; i++) {
+
+      sum += +els[i].value;
+
+    }
+
+    this.sumOut.value = sum;
+
+  };
+
+};
+             var s="Підрахунок:\n";
+            function set(vch) 
+            {
+                if(s.indexOf(vch)<0)
+                s=s+vch+"\n";
+                else s=s.replace(vch+"\n",'');
+                document.formText.area.value=s;
+    }
+
+</script>
+</head>
+    <body >
+         <center>
+            <form name="formText" class="form1">
+                <p> Оберіть курс:</p>
+                <table class="t2">
+                    <tr>
+                    <td >
+                        <label class="container">
+                        <input type="checkbox" class="button" name="a1" id="m2" value="+100"onclick="set(formText.elements[0].value)"><b>Cs50</b> 
+                            <span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="a1" id="m2" value="+200" onclick="set(formText.elements[1].value)"><b>Python</b> <span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="a1" id="m2" value="+300" onclick="set(formText.elements[2].value)"><b>JavaScript</b> <span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="a1" id="m2" value="+400"onclick="set(formText.elements[3].value)" ><b>C++</b><span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="a1" id="m2" value="+500" onclick="set(formText.elements[4].value)"><b>C#</b><span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="a1" id="m2" value="+600"onclick="set(formText.elements[5].value)" ><b>Unity</b><span class="checkmark"></span></label>
+                        <label class="container">
+                        <input type="checkbox" class="button" name="a1" id="m2" value="+700" onclick="set(formText.elements[6].value)"><b>Java </b><span class="checkmark"></span></label>
+                        </td><td align="right"> <img src="pic1.jpg" border="2" align="center" width=400 height=360></td></tr>
+                </table>
+                <p> Оберіть тривалість курсу:</p>
+                <table class="t3">
+                    <td >
+                        <label class="container">
+                        <input type="checkbox" class="button" name="a1" id="m2" value="+120"onclick="set(formText.elements[14].value)"><b>1 місяць</b> 
+                            <span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="a1" id="m2" value="+220" onclick="set(formText.elements[15].value)"><b>2 місяці</b> <span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="a1" id="m2" value="+320" onclick="set(formText.elements[16].value)"><b>3 місяці</b> <span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="a1" id="m2" value="+420"onclick="set(formText.elements[17].value)" ><b>4 місяці</b><span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="a1" id="m2" value="+520" onclick="set(formText.elements[18].value)"><b>5 місяців</b><span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="a1" id="m2" value="+620"onclick="set(formText.elements[19].value)" ><b>6 місяців</b><span class="checkmark"></span></label>
+                        <label class="container">
+                        <input type="checkbox" class="button" name="a1" id="m2" value="+720" onclick="set(formText.elements[20].value)"><b>7 місяців </b><span class="checkmark"></span></label>
+                                                    </td><td align="right"><img src="pic2.png" border="2" align="center" width=400 height=360></td>
+                </table>
+                <p> Оберіть мову викладання курс:</p>
+                <table class="t1">
+                    <td >
+                        <label class="container">
+                        <input type="checkbox" class="button" name="m1" id="m1" value="+110"onclick="set(formText.elements[7].value)"><b>Англійська</b> 
+                            <span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="m1" id="m2" value="+710" onclick="set(formText.elements[8].value)"><b>Іспанська</b> <span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="m1" id="m3" value="+310" onclick="set(formText.elements[9].value)"><b>Німецька</b> <span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="m1" id="m4" value="+410"onclick="set(formText.elements[10].value)" ><b>Французька</b><span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="m1" id="m5" value="+510" onclick="set(formText.elements[11].value)"><b>Російська</b><span class="checkmark"></span></label>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="m1" id="m6" value="+610"onclick="set(formText.elements[12].value)" ><b>Італійська</b><span class="checkmark"></span></label>
+                        <label class="container">
+                        <input type="checkbox" class="button" name="m1" id="m7" value="+210" onclick="set(formText.elements[13].value)"><b>Китайська </b><span class="checkmark"></span></label>
+                    </td>
+                <td align="right"> <img src="pic3.jpg" border="2" align="center" width=400 height=360></td></table>
+                <p> Оберіть форму звітності:</p>
+                <table class="t5">
+                    <tr>
+                    <td >
+                        <label class="container">
+                        <input type="checkbox" class="button" name="m1" id="m1" value="+140"onclick="set(formText.elements[21].value)"><b>Екзамен</b> 
+                            <span class="checkmark"></span></label></td></tr>
+                    <tr>
+                    <td>
+                        <label class="container">
+                            <input type="checkbox" class="button" name="m1" id="m2" value="+740" onclick="set(formText.elements[22].value)"><b>Залік</b> <span class="checkmark"></span></label>
+                        
+                        </td></tr></table>
+                <hr>
+                
+                        <textarea name="area" cols="40" rows="10"></textarea><br>
+                    <input type="reset"  class="button1"value="Очистити" onclick="s='Підрахунок:\n'">
+                
+                <td class="r"><br>Сумма вартості навчання:
+
+  <br>
+                    <input type="text" name="sumOut" class="e" disabled="false" value="">грн.
+             </form></center>
+        
+    </body>
+</html>
